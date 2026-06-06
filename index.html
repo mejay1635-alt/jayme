@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>集美大学 — 宣传册</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 页面主容器 -->
+  <div class="page">
+    <!-- 顶部大图 Hero 区 -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-brand">
+          <img class="logo" src="logo.svg" alt="集美大学校徽" />
+          <div>
+            <h1 class="title">集美大学</h1>
+            <p class="brand-note">诚毅、博学、创新、致远</p>
+          </div>
+        </div>
+        <p class="subtitle">传承闽南文化，面向未来的创新人才摇篮</p>
+        <div class="hero-cta">
+          <a href="#admission" class="btn primary">了解招生</a>
+          <a href="#programs" class="btn ghost">专业介绍</a>
+        </div>
+      </div>
+      <!-- 微交互：随鼠标移动的光斑（纯 CSS + JS 轻动画） -->
+      <div class="spot" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <!-- 学校简介 -->
+      <section id="about" class="section glass">
+        <h2>学校简介</h2>
+        <p>
+          集美大学坐落于福建厦门集美区，是一所以文化底蕴与现代创新并重的综合性大学。学校坚持“诚毅、博学、砺志、笃行”的校训，注重学术研究与应用实践协同发展。
+        </p>
+        <div class="features">
+          <article class="card">
+            <h3>师资力量</h3>
+            <p>一流教师团队，注重产学研合作与教学创新。</p>
+          </article>
+          <article class="card">
+            <h3>校园环境</h3>
+            <p>现代化教学设施与富有文化气息的校园景观并存。</p>
+          </article>
+          <article class="card">
+            <h3>国际合作</h3>
+            <p>多项国际交流项目，提供海外研修与联合培养机会。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 专业介绍 -->
+      <section id="programs" class="section">
+        <h2>重点专业</h2>
+        <div class="grid">
+          <div class="program card">
+            <h4>计算机科学与技术</h4>
+            <p>人工智能、数据科学与软件工程方向。</p>
+          </div>
+          <div class="program card">
+            <h4>建筑与设计</h4>
+            <p>强调文化传承与现代设计实践。</p>
+          </div>
+          <div class="program card">
+            <h4>商学院</h4>
+            <p>国际化课程与创业孵化支持。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 校园风采画廊（使用 CSS 背景代替静态图片占位） -->
+      <section id="gallery" class="section glass">
+        <h2>校园风采</h2>
+        <div class="gallery">
+          <div class="photo p1" aria-hidden="true"></div>
+          <div class="photo p2" aria-hidden="true"></div>
+          <div class="photo p3" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- 招生信息 -->
+      <section id="admission" class="section">
+        <h2>招生信息</h2>
+        <div class="admission-grid">
+          <div class="admission-card card">
+            <h3>本科生</h3>
+            <p>文理工农医艺术等多学科门类，面向全国招生。</p>
+          </div>
+          <div class="admission-card card">
+            <h3>研究生</h3>
+            <p>提供硕博联合培养与高层次科研平台支持。</p>
+          </div>
+          <div class="admission-card card">
+            <h3>国际学生</h3>
+            <p>国际课程与中文/英文授课选择，完善的入学服务。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 联系方式 -->
+      <section id="contact" class="section glass contact">
+        <h2>联系我们</h2>
+        <p>地址：福建省 · 集美区 · XX路</p>
+        <p>电话：+86 0592-XXXXXXX</p>
+        <p>邮箱：admission@jimeiuniversity.edu.cn</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 集美大学 • 欢迎加入我们</p>
+    </footer>
+  </div>
+
+  <script>
+    // 简单的交互：鼠标移动时使 hero 的光斑跟随，增强动感
+    const hero = document.querySelector('.hero');
+    const spot = document.querySelector('.spot');
+    hero?.addEventListener('mousemove', e => {
+      const rect = hero.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      spot.style.transform = `translate(${x - rect.width/2}px, ${y - rect.height/2}px)`;
+      spot.style.opacity = 1;
+    });
+    hero?.addEventListener('mouseleave', () => {
+      spot.style.opacity = 0;
+    });
+    // 平滑滚动
+    document.documentElement.style.scrollBehavior = 'smooth';
+  </script>
+</body>
+</html>
