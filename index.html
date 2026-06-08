@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jayme | 个人主页</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="首页">
+      <span class="logo-mark" aria-hidden="true"></span>
+    </a>
+    <nav class="nav" aria-label="页面导航">
+      <a href="#about">关于我</a>
+      <a href="#work">正在做</a>
+      <a href="#chat">数字分身</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="status-pill">
+          <span></span>
+          内容策划 / AI 产品学习中
+        </div>
+        <h1>让想法变清楚，让 AI 变好用。</h1>
+        <p class="intro">你好，我是 jayme，一个正在学习用 AI 做产品的内容策划。我正在整理自己的作品、写作方向，以及未来想探索的 AI 应用。</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#chat">数字分身</a>
+          <a class="secondary-link" href="#work">查看方向</a>
+        </div>
+      </div>
+
+      <aside class="profile-panel" aria-label="个人资料卡">
+        <div class="avatar" aria-label="jayme 头像">
+          <div class="avatar-portrait" aria-hidden="true">
+            <span class="hair"></span>
+            <span class="face"></span>
+            <span class="neck"></span>
+            <span class="body"></span>
+          </div>
+        </div>
+        <div class="profile-main">
+          <p class="eyebrow">Personal homepage</p>
+          <h2>jayme</h2>
+          <p>内容策划，关注内容表达、AI 应用和知识整理。</p>
+        </div>
+        <div class="profile-tags" aria-label="关键词">
+          <span>AI 应用</span>
+          <span>写作</span>
+          <span>知识整理</span>
+        </div>
+        <dl class="profile-meta">
+          <div>
+            <dt>最近</dt>
+            <dd>搭主页 / 整理作品集</dd>
+          </div>
+          <div>
+            <dt>特点</dt>
+            <dd>把复杂问题讲清楚</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>个人信息</h2>
+      </div>
+      <div class="info-grid">
+        <article class="info-card">
+          <span>身份</span>
+          <strong>内容策划</strong>
+          <p>正在学习如何把 AI 融入产品和内容工作流。</p>
+        </article>
+        <article class="info-card">
+          <span>最近在做</span>
+          <strong>个人主页与作品集</strong>
+          <p>整理自己的作品、写作主题和未来合作方向。</p>
+        </article>
+        <article class="info-card">
+          <span>兴趣</span>
+          <strong>AI 应用 / 写作 / 旅行</strong>
+          <p>喜欢从真实场景里发现问题，再用清楚的表达连接人和方案。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="section-heading">
+        <p class="eyebrow">Focus</p>
+        <h2>我关心的方向</h2>
+      </div>
+      <div class="focus-list">
+        <div>
+          <h3>内容表达</h3>
+          <p>把复杂信息拆清楚，形成易理解、能传播的表达。</p>
+        </div>
+        <div>
+          <h3>AI 应用</h3>
+          <p>探索 AI 在内容策划、知识管理和产品原型中的实际用法。</p>
+        </div>
+        <div>
+          <h3>知识整理</h3>
+          <p>把零散经验沉淀成结构化资料、案例和作品集。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="chat" class="section chat-section">
+      <div class="chat-copy">
+        <p class="eyebrow">Digital Twin</p>
+        <h2>和 jayme 的数字分身聊聊</h2>
+        <p>你可以问它：jayme 最近在做什么、有哪些作品、适合怎样合作，或者怎么联系。</p>
+      </div>
+
+      <div class="chat-card" aria-label="数字分身聊天区">
+        <div class="chat-header">
+          <div class="mini-avatar">J</div>
+          <div>
+            <strong>jayme.bot</strong>
+            <span>基于 jayme 的公开简介回答</span>
+          </div>
+        </div>
+
+        <div class="quick-questions" aria-label="快捷问题">
+          <button type="button" data-question="你现在在做什么？">你现在在做什么？</button>
+          <button type="button" data-question="你有哪些作品？">你有哪些作品？</button>
+          <button type="button" data-question="怎么联系你？">怎么联系你？</button>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite">
+          <div class="message bot">
+            <p>你好，我是 jayme 的数字分身。你可以问我 jayme 最近在做什么、擅长什么，或者如何联系。</p>
+          </div>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <label class="sr-only" for="chatInput">输入问题</label>
+          <input id="chatInput" type="text" placeholder="输入你的问题..." autocomplete="off">
+          <button type="submit">发送</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
