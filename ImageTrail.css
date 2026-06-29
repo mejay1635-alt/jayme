@@ -1,0 +1,70 @@
+.image-trail {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 49, 61, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 209, 102, 0.24), transparent 38%),
+    linear-gradient(315deg, rgba(26, 115, 232, 0.18), transparent 42%),
+    rgba(255, 255, 255, 0.84);
+  box-shadow: 0 18px 48px rgba(36, 49, 61, 0.12);
+  touch-action: none;
+}
+
+.image-trail__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(220px, 48vw);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 8px solid #fff;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 18px 38px rgba(36, 49, 61, 0.22);
+  will-change: transform, opacity, filter;
+}
+
+.image-trail__img-inner {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0 24px;
+}
+
+.photo-preview-actions a,
+.photo-preview-actions button {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #1a73e8;
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 7px 0 #0d56b8;
+}
+
+.photo-preview-actions .ghost {
+  background: #ffd166;
+  color: #493817;
+  box-shadow: 0 7px 0 #e8ad2f;
+}
+
+@media (max-width: 620px) {
+  .image-trail {
+    min-height: 360px;
+  }
+}
